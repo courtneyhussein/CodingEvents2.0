@@ -7,15 +7,17 @@
 
 <table>
     <tr>
+        <th>ID</th>
         <th>Event Name</th>
         <th>Event Description</th>
     </tr>
-    @foreach (var meeting in ViewBag.events)
+    @foreach (Event meeting in ViewBag.events)
     {
-        <tr>
-            <td>@meeting.Key</td>
-            <td>@meeting.Value</td>
-        </tr>
+<tr>
+    <td>@meeting.Id</td>
+    <td>@meeting.Name</td>
+    <td>@meeting.Description</td>
+</tr>
         
     }
 </table>
